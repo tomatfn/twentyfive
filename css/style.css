@@ -1,0 +1,73 @@
+body{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100vw;
+}
+
+.material-symbols-outlined {
+  font-size: 35px !important;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+@media screen and (max-width: 500px){
+   
+    #container{
+    display: grid;
+    height: 98vh;
+    width: 98vw;
+    padding: 0px;
+    gap: 1vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 80% 20%;
+    grid-template-areas:
+        'hd'
+        'mn'
+        'ft'
+    }
+
+    .name{
+    text-align: center;
+    }
+
+    #headermain{
+    grid-area: hd;
+    background-color: red;
+    }
+
+    h1{
+    font-size: 25px;
+    margin-top: 10px;
+    }
+
+    nav{
+        
+    }
+
+
+    #mainsite{
+    display: grid;
+    grid-area: mn;
+    background-color: blue;
+    height: 80vh;
+    }
+
+    h2{
+    position: absolute;
+    font-size: 35px;
+    display: flex;
+    justify-self: center;
+    }
+
+    #bmwi7pic{
+    width: 100%;
+    display: flex;
+    }
+
+    footer{
+        grid-area: ft;
+    }
+
+}
