@@ -12,6 +12,33 @@ body{
   'opsz' 24
 }
 
+
+h2{
+    color: white;
+    position: absolute;
+    z-index: 10;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gråbakgrund{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 5;
+    justify-self: center;
+}
+
+#bokakörning{
+    background-color:rgb(28, 105, 212);
+    position: absolute;
+    justify-self: center;
+}
+
+#seallabilar{
+    background-color:rgb(28, 105, 212);
+    position: absolute;
+    justify-self: center;
+}
+
 @media screen and (max-width: 500px){
    
     #container{
@@ -21,15 +48,11 @@ body{
     padding: 0px;
     gap: 1vh;
     grid-template-columns: 100%;
-    grid-template-rows: 15% 80% 20%;
+    grid-template-rows: 15% auto 20%;
     grid-template-areas:
         'hd'
         'mn'
         'ft'
-    }
-
-    .name{
-    text-align: center;
     }
 
     #headermain{
@@ -37,21 +60,67 @@ body{
     background-color: red;
     }
 
-    h1{
-    font-size: 25px;
+    .name{
+    font-size: 28px;
     margin-top: 10px;
+    text-align: center;
+    font-family: 'Merriweather';
     }
 
     nav{
         
     }
 
+    #pris{
+        text-align: center;
+        margin: 11px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+    }
+
+    .prisbakgrund{
+        width: 150px;
+        height: 40px;
+        background-color:rgb(28, 105, 212);
+        border-radius: 2px;
+        position: absolute;
+        justify-self: center;
+        top: 221px; 
+    }
+
 
     #mainsite{
     display: grid;
     grid-area: mn;
-    background-color: blue;
-    height: 80vh;
+    background-color: pink;
+    position: relative;
+    }
+
+    .gråbakgrund{
+        z-index: 5;
+        width: 80vw;
+        height: 5vh;
+        top: 27px;
+    }
+    
+    #bokakörning{
+        width: 200px;
+        height: 50px;
+        border-radius: 2px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    
+    #seallabilar{
+        width: 100px;
+        height: 40px;
+        top: 300px;
+        border-radius: 2px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
     }
 
     h2{
@@ -64,10 +133,19 @@ body{
     #bmwi7pic{
     width: 100%;
     display: flex;
+    z-index: 0;
+    position: absolute;
     }
 
     footer{
         grid-area: ft;
+        background-color: purple;
     }
+
+}
+
+
+
+@media screen and (min-width: 501px){
 
 }
