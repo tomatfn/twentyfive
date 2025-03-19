@@ -7,12 +7,14 @@
     <title>Rich Millionaire Automotive</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -25,7 +27,16 @@
             </nav>
             <h1 class="name">Rich Millionaire Automotive</h1>
 
+            <div id="sidemenu">
+                <ul>
+                    <li><a href="#">Hem</a></li>
+                    <li><a href="#">Tjänster</a></li>
+                    <li><a href="#">Om oss</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
 
+            <div id="overlay"></div>
         </header>
 
         <main id="mainsite">
@@ -33,10 +44,18 @@
             <div class="gråbakgrund"></div>
             <img id="bmwi7pic" src="img/bmwi7.jpg" alt="picture of a new released car">
             <div class="prisbakgrund">
-                <p id="pris">Bygg och pris</p>
+                <p class="pris">Bygg och pris</p>
             </div>
-            <div id="seallabilar">Se alla bilar</div>
-            <div id="bokakörning">Boka provkörning</div>
+            <div id="seallabilar">
+                <p class="pris">Se alla bilar</p>
+            </div>
+            <div id="bokakörning">
+                <p class="pris">Boka provkörning</p>
+            </div>
+            <span id="steeringwheel" class="material-symbols-outlined">
+                search_hands_free
+            </span>
+            <h3>Hitta din bil</h3>
         </main>
 
         <footer>

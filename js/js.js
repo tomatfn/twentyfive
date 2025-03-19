@@ -1,11 +1,25 @@
-document.querySelector(".fade-layer").addEventListener("click", showMenu)
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".menubutton");
+    const sideMenu = document.getElementById("sidemenu");
+    const overlay = document.getElementById("overlay");
 
-document.querySelector(".menu-button").addEventListener("click", showMenu)
 
-function showMenu(){
-    let menu = document.querySelector("nav.menu")
-    menu.classList.toggle("show")
+    menuButton.addEventListener("click", function () {
+        sideMenu.classList.add("open");
+        overlay.classList.add("active");
+    });
 
-    let layer = document.querySelector(".fade-layer")
-    layer.classList.toggle("visible")
-}
+    overlay.addEventListener("click", function () {
+        sideMenu.classList.remove("open");
+        overlay.classList.remove("active");
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            sideMenu.classList.remove("open");
+            overlay.classList.remove("active");
+        }
+    });
+
+});
+
