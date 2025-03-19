@@ -1,7 +1,13 @@
 body{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     width: 100vw;
 }
+
+#bmwi7pic{
+    z-index: 0;
+    position: absolute;
+    border: solid 1px black;
+    }
 
 #sidemenu{
     position: fixed;
@@ -67,6 +73,9 @@ body{
     position: absolute;
 }
 
+#carlogo{
+    position: absolute;
+}
 
 h2{
     color: white;
@@ -86,12 +95,20 @@ h2{
     background-color:rgb(28, 105, 212);
     position: absolute;
     justify-self: center;
+    border: solid 1px black;
+    text-decoration: none;
+}
+
+.pris a{
+    text-decoration: none;
+    color: white;
 }
 
 #seallabilar{
     background-color:rgb(28, 105, 212);
     position: absolute;
     justify-self: center;
+    border: solid 1px black;
 }
 
 @media screen and (max-width: 500px){
@@ -112,7 +129,7 @@ h2{
 
     #headermain{
     grid-area: hd;
-    background-color: red;
+    /* background-color: red; */
     }
 
     .name{
@@ -142,13 +159,14 @@ h2{
         position: absolute;
         justify-self: center;
         top: 221px; 
+        border: solid 1px black;
     }
 
 
     #mainsite{
     display: grid;
     grid-area: mn;
-    background-color: pink;
+    /* background-color: pink; */
     position: relative;
     }
 
@@ -171,7 +189,17 @@ h2{
     
 
     #steeringwheel{
-        top: 300px;
+        top: 440px;
+        justify-self: center;
+        font-size: 60px !important;
+        color: gray;
+    }
+
+    #carlogo{
+        top: 340px;
+        justify-self: center;
+        font-size: 50px !important;
+        color: gray;
     }
 
     #seallabilar{
@@ -195,8 +223,6 @@ h2{
     #bmwi7pic{
     width: 100%;
     display: flex;
-    z-index: 0;
-    position: absolute;
     }
 
     h3{
@@ -211,9 +237,23 @@ h2{
 
     footer{
         grid-area: ft;
-        background-color: purple;
+        /* background-color: purple; */
     }
 
+    .omoss{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        font-size: 17px;
+    }
+
+    .omosstext{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 5px;
+        margin-top: 0px;
+        font-size: 16px;
+    }
 }
 
 
