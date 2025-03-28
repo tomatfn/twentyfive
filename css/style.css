@@ -1,15 +1,25 @@
-body{
-    background-color: rgba(0, 0, 0, 0.1);
-    width: 100vw;
+body {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: 0;
+    position: relative;
 }
 
-#bmwi7pic{
+nav {
+    position: sticky;
+    background-color: grey;
+    width: 100%;
     z-index: 0;
-    position: absolute;
-    border: solid 1px black;
-    }
+    position: fixed;
+}
 
-#sidemenu{
+header {
+    position: sticky;
+    top: 0;
+}
+
+
+#sidemenu {
     position: fixed;
     top: 0;
     left: -250px;
@@ -22,31 +32,31 @@ body{
     padding-top: 50px;
 }
 
-#sidemenu ul{
+#sidemenu ul {
     list-style: none;
     padding: 0;
 }
 
-#sidemenu ul li{
+#sidemenu ul li {
     padding: 15px;
     text-align: center;
 }
 
-#sidemenu ul li a{
+#sidemenu ul li a {
     text-decoration: none;
     color: black;
     font-size: 18px;
 }
 
-#sidemenu.open{
+#sidemenu.open {
     left: 0;
 }
 
-#overlay{
+#overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
@@ -55,209 +65,521 @@ body{
     z-index: 900;
 }
 
-#overlay.active{
+#overlay.active {
     opacity: 1;
     visibility: visible;
 }
 
 .material-symbols-outlined {
-  font-size: 35px !important;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    font-size: 48px !important;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
-#steeringwheel{
+#steeringwheel {
     position: absolute;
 }
 
-#carlogo{
+#carlogo {
     position: absolute;
 }
 
-h2{
-    color: white;
-    position: absolute;
-    z-index: 10;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-.gråbakgrund{
+.gråbakgrund {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    z-index: 5;
+    z-index: 0;
     justify-self: center;
 }
 
-#bokakörning{
-    background-color:rgb(28, 105, 212);
+#bokakörning {
+    background-color: rgb(28, 105, 212);
     position: absolute;
     justify-self: center;
     border: solid 1px black;
     text-decoration: none;
 }
 
-.pris a{
+.pris a {
     text-decoration: none;
     color: white;
 }
 
-#seallabilar{
-    background-color:rgb(28, 105, 212);
+#seallabilar {
+    background-color: rgb(28, 105, 212);
     position: absolute;
     justify-self: center;
     border: solid 1px black;
 }
 
-@media screen and (max-width: 500px){
-   
-    #container{
-    display: grid;
-    height: 98vh;
-    width: 98vw;
-    padding: 0px;
-    gap: 1vh;
-    grid-template-columns: 100%;
-    grid-template-rows: 15% auto 20%;
-    grid-template-areas:
-        'hd'
-        'mn'
-        'ft'
+@media screen and (max-width: 500px) {
+
+    #container {
+        display: grid;
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 100%;
+        position: relative;
+        z-index: 0;
+        grid-template-rows: 7vh 38vh 47vh 20vh;
+        grid-template-areas:
+            'hd'
+            'sc'
+            'mn'
+            'ft'
+    }
+    #containerbilar {
+        display: grid;
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 80%;
+        position: relative;
+        z-index: 0;
+        grid-template-rows: 7vh auto 20vh;
+        grid-template-areas:
+            'hd'
+            'mn'
+            'ft'
     }
 
-    #headermain{
-    grid-area: hd;
-    /* background-color: red; */
+    #all_cars{
+        display: flex;
+        align-content: space-evenly;
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+        row-gap: 0.5%;
+        column-gap: 2vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 
-    .name{
-    font-size: 28px;
-    margin-top: 10px;
-    text-align: center;
-    font-family: 'Merriweather';
-    }
-
-    nav{
+    .boxes{
+        width: 47vw;
+        flex-direction: column;
+        background-color:rgba(0, 0, 0, 0.2);
+        height: 30vh;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
     }
 
-    .pris{
+    .bilarbild{
+        width: 100%;
+        height: 80%;
+    }
+
+    .bmwbilder{
+        width: 100%;
+        height: 60%;
+    }
+
+    .mclarenimg{
+        width: 90%;
+        height: 39%;
+    }
+
+    .imgtext{
+        font-family: Arial, Helvetica, sans-serif;
+        bottom: 10px;
+        margin: 0;
+    }
+
+    #containerboka {
+        display: grid;
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 80%;
+        position: relative;
+        z-index: 0;
+        grid-template-rows: 7vh 60vh 47vh 20vh;
+        grid-template-areas:
+            'hd'
+            'sc'
+            'mn'
+            'ft'
+    }
+    #containerbygg {
+        display: grid;
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 80%;
+        position: relative;
+        z-index: 0;
+        grid-template-rows: 7vh 60vh 47vh 20vh;
+        grid-template-areas:
+            'hd'
+            'sc'
+            'mn'
+            'ft'
+    }
+
+
+    nav {
+        margin: 0;
+        top: 0;
+        height: 7%;
+    }
+
+    #headermain {
+        grid-area: hd;
+        /* background-color: red; */
+    }
+
+
+    .name {
+        font-size: 23px;
+        margin-top: -43px;
+        padding-left: 45px;
+        text-align: center;
+        font-family: 'Merriweather';
+    }
+
+    .pris {
         text-align: center;
         margin: 11px;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 500;
+        z-index: 5;
     }
 
-    .prisbakgrund{
+    .prisbakgrund {
         width: 150px;
         height: 40px;
-        background-color:rgb(28, 105, 212);
+        background-color: rgb(28, 105, 212);
         border-radius: 2px;
         position: absolute;
         justify-self: center;
-        top: 221px; 
+        top: 80%;
         border: solid 1px black;
     }
 
-
-    #mainsite{
-    display: grid;
-    grid-area: mn;
-    /* background-color: pink; */
-    position: relative;
+    #section1 {
+        grid-area: sc;
+        /* background-color: blue; */
+        background-image: url(/img/bmwi7.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 0;
     }
 
-    .gråbakgrund{
+    h2 {
+        position: absolute;
+        font-size: 35px;
+        top: 4%;
+        color: white;
+        z-index: 6;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #mainsite {
+        display: grid;
+        grid-area: mn;
+        /* background-color: pink; */
+    }
+
+    .gråbakgrund {
         z-index: 5;
         width: 80vw;
         height: 5vh;
-        top: 27px;
+        top: 12%;
     }
-    
-    #bokakörning{
+
+    #bokakörning {
         width: 150px;
         height: 40px;
         border-radius: 2px;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-        top: 500px;
+        top: 78%;
+        z-index: 5;
     }
-    
 
-    #steeringwheel{
-        top: 440px;
+
+    #steeringwheel {
+        top: 55%;
         justify-self: center;
         font-size: 60px !important;
         color: gray;
+        z-index: 5;
     }
 
-    #carlogo{
-        top: 340px;
+    #carlogo {
+        top: 72%;
         justify-self: center;
         font-size: 50px !important;
         color: gray;
+        z-index: 5;
     }
 
-    #seallabilar{
+    #seallabilar {
         width: 106px;
         height: 40px;
-        top: 395px;
+        top: 62%;
         border-radius: 2px;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-        
+        z-index: 5;
+
     }
 
-    h2{
-    position: absolute;
-    font-size: 35px;
-    display: flex;
-    justify-self: center;
-    }
-
-    #bmwi7pic{
-    width: 100%;
-    display: flex;
-    }
-
-    h3{
+    h3 {
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: underline;
-        top: 260px;
+        top: 44%;
         font-size: 30px;
         color: black;
         position: absolute;
         justify-self: center;
+        z-index: 5;
     }
 
-    footer{
+    footer {
         grid-area: ft;
         /* background-color: purple; */
     }
 
-    .omoss{
+    .omoss {
         font-family: Arial, Helvetica, sans-serif;
         margin-top: 5px;
-        margin-left: 5px;
+        margin-left: 3%;
         margin-bottom: 5px;
         font-size: 17px;
+        top: 20%;
     }
 
-    .omosstext{
+    .omosstext {
         font-family: Arial, Helvetica, sans-serif;
-        margin-left: 5px;
+        margin-left: 3%;
+        margin-right: 3%;
         margin-top: 0px;
         font-size: 16px;
+        top: 20%;
     }
 }
 
 
 
-@media screen and (min-width: 501px){
+@media screen and (min-width: 501px) {
+    #container {
+        display: grid;
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 80%;
+        position: relative;
+        z-index: 0;
+        grid-template-rows: 7vh 60vh 47vh 20vh;
+        grid-template-areas:
+            'hd'
+            'sc'
+            'mn'
+            'ft'
+    }
+    #containerbilar {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 80%;
+        position: relative;
+        z-index: 0;
+        grid-template-rows: 7vh 60vh 47vh 20vh;
+        grid-template-areas:
+            'hd'
+            'mn'
+            'ft'
+    }
+    #containerboka {
+        display: grid;
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 80%;
+        position: relative;
+        z-index: 0;
+        grid-template-rows: 7vh 60vh 47vh 20vh;
+        grid-template-areas:
+            'hd'
+            'sc'
+            'mn'
+            'ft'
+    }
+    #containerbygg {
+        display: grid;
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 80%;
+        position: relative;
+        z-index: 0;
+        grid-template-rows: 7vh 60vh 47vh 20vh;
+        grid-template-areas:
+            'hd'
+            'sc'
+            'mn'
+            'ft'
+    }
 
+    
+
+    nav {
+        margin: 0;
+        top: 0;
+        height: 7%;
+    }
+
+    #headermain {
+        grid-area: hd;
+        /* background-color: red; */
+    }
+
+
+    .name {
+        font-size: 26px;
+        margin-top: -43px;
+        padding-left: 45px;
+        text-align: center;
+        font-family: 'Merriweather';
+    }
+
+    .pris {
+        text-align: center;
+        margin: 11px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        z-index: 5;
+    }
+
+    .prisbakgrund {
+        width: 150px;
+        height: 40px;
+        background-color: rgb(28, 105, 212);
+        border-radius: 2px;
+        position: absolute;
+        justify-self: center;
+        top: 80%;
+        border: solid 1px black;
+    }
+
+    #section1 {
+        grid-area: sc;
+        /* background-color: blue; */
+        background-image: url(/img/bmwi7.jpg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        position: relative;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 0;
+    }
+
+    h2 {
+        position: absolute;
+        font-size: 35px;
+        top: 4%;
+        color: white;
+        z-index: 6;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #mainsite {
+        display: grid;
+        grid-area: mn;
+        /* background-color: pink; */
+    }
+
+    .gråbakgrund {
+        z-index: 5;
+        width: 80vw;
+        height: 5vh;
+        top: 12%;
+    }
+
+    #bokakörning {
+        width: 150px;
+        height: 40px;
+        border-radius: 2px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        top: 78%;
+        z-index: 5;
+    }
+
+
+    #steeringwheel {
+        top: 55%;
+        justify-self: center;
+        font-size: 60px !important;
+        color: gray;
+        z-index: 5;
+    }
+
+    #carlogo {
+        top: 72%;
+        justify-self: center;
+        font-size: 50px !important;
+        color: gray;
+        z-index: 5;
+    }
+
+    #seallabilar {
+        width: 106px;
+        height: 40px;
+        top: 62%;
+        border-radius: 2px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        z-index: 5;
+
+    }
+
+    h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: underline;
+        top: 44%;
+        font-size: 30px;
+        color: black;
+        position: absolute;
+        justify-self: center;
+        z-index: 5;
+    }
+
+    footer {
+        grid-area: ft;
+        /* background-color: purple; */
+    }
+
+    .omoss {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 5px;
+        margin-left: 3%;
+        margin-bottom: 5px;
+        font-size: 17px;
+        top: 20%;
+    }
+
+    .omosstext {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 0px;
+        font-size: 16px;
+        top: 20%;
+    }
 }
