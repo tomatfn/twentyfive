@@ -390,18 +390,65 @@ header {
             'ft'
     }
     #containerbilar {
-        display: flex;
+        display: grid;
         width: 100%;
         margin: 0;
         grid-template-columns: 80%;
         position: relative;
         z-index: 0;
-        grid-template-rows: 7vh 60vh 47vh 20vh;
+        grid-template-rows: 7vh auto 20vh;
         grid-template-areas:
             'hd'
             'mn'
             'ft'
     }
+
+    #all_cars{
+        display: flex;
+        align-content: space-evenly;
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+        row-gap: 3%;
+        column-gap: 2vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .boxes{
+        width: 30vw;
+        flex-direction:column;
+        background-color:rgba(0, 0, 0, 0.2);
+        height: 50vh;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .bilarbild{
+        width: 100%;
+        height: 80%;
+    }
+
+    .bmwbilder{
+        width: 100%;
+        height: 60%;
+    }
+
+    .mclarenimg{
+        width: 90%;
+        height: 39%;
+    }
+
+    .imgtext{
+        font-family: Arial, Helvetica, sans-serif;
+        bottom: 10px;
+        margin: 0;
+    }
+
     #containerboka {
         display: grid;
         width: 100%;
